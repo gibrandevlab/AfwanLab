@@ -1,0 +1,12 @@
+.bg-transparent2 {
+  background: linear-gradient(to bottom, #87CEFA 0%, #FFFFFF 100%);
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* Adjusted to a more reasonable value */
+  transition: background-color 0.5s ease-in-out, background-image 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+#navbar.navanimation {
+
+  transition: background-color 0.5s ease-in-out;
+}

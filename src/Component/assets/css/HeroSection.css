@@ -1,0 +1,85 @@
+/* CSS untuk animasi muncul dari luar layar */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInWords {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLetters {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  animation: slideInLeft 1s forwards;
+}
+
+span {
+  animation: slideInRight 1s forwards;
+  display: inline-block; /* Menghindari masalah dengan animasi */
+  opacity: 0;
+}
+
+/* CSS untuk kata demi kata muncul satu per satu */
+.words-container {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInWords 1s forwards;
+}
+
+/* CSS untuk huruf demi huruf muncul satu per satu */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInLetters 01.1s forwards;
+}
+
+.jargon::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.download-button {
+  transition: width 0.5s ease;
+}
